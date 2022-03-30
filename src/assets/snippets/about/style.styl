@@ -1,0 +1,51 @@
+.about
+    background: color1;
+
+    &__container
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+
+        svg
+            max-width: 450px;
+
+    &__informations
+        flex: 0 1 500px;
+
+    &__title
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 600;
+        color: colorWhite;
+        margin-bottom: 20px;
+
+        span
+            color: color4;
+            font-size: 60px;
+            line-height: 60px;
+
+    &__paragraph
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: color3;
+
+@media mobile
+    .about
+        &__container
+            flex-direction: column-reverse;
+
+            svg
+                margin-top: 10px;
+                max-width: 300px;
+
+        &__informations
+            flex: 0 1 300px;
+            max-width: 350px;
+            margin: 0 auto;
+
+        &__title
+            font-size: 30px

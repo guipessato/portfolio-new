@@ -1,0 +1,127 @@
+.skills
+    background: color1;
+
+    &__container
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1200px;
+        min-height: 450px;
+        margin: 0 auto;
+        padding: 60px 20px;
+
+    &__infos
+        font-size: 16px;
+        color: color3;
+
+    &__title
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 600;
+        color: colorWhite;
+        margin-bottom: 20px;
+        text-align: center;
+
+        span
+            color: color4;
+            font-size: 60px;
+            line-height: 60px;
+
+    &__cards
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        flex: 0 1 460px;
+        gap: 20px 0;
+
+    &__card
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 96px;
+        height: 96px;
+        position: relative;
+        background: color2;
+        border-radius: 5px;
+        border: 3px solid color2;
+        transition: transition;
+
+        &-name
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: calc(0% - 43px);
+            color: colorWhite;
+            font-weight: 600;
+            padding: 0 10px;
+            background: color4;
+            border: 3px solid color4;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: transition;
+
+        &:last-child
+            display: none;
+
+        &:nth-child(n+5)
+            .skills__card-name
+                top: calc(100% + 15px);
+
+            &:before
+                top: calc(100% + 7px);
+
+        &:before
+            content: '';
+            position: absolute;
+            top: calc(0% - 8px);
+            width: 14px;
+            height: 3px;
+            background: color4;
+            transform: rotate(90deg) scale(0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: transition;
+
+        &:hover
+            border: 3px solid color4;
+
+            .skills__card-name
+                opacity: 1;
+                visibility: visible;
+
+            &:before
+                opacity: 1;
+                visibility: visible;
+                transform: rotate(90deg) scale(1);
+
+    &__image
+        width: 64px;
+        height: 64px;
+
+@media mobile
+    .skills
+        &__container
+            flex-direction: column;
+
+        &__title
+            font-size: 30px;
+
+        &__cards
+            flex: 0 1 100%;
+
+        &__card
+            flex: 0 1 31%;
+            gap: 15px;
+
+            &:before
+                display: none;
+
+            &-name
+                display: none;
+
+            &:last-child
+                display: block;
+                opacity: 0;
+                visibility: hidden;

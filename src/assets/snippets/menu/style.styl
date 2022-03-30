@@ -1,0 +1,69 @@
+
+.header
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+
+.navigation
+    background: color1;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #343434;
+
+    &__container
+        max-width: 1200px;
+        margin: 0 auto;
+
+    &__list
+        height: 70px;
+
+    &__item
+        font-size: 16px;
+        color: color3;
+        text-align: center;
+
+    &__link
+        position: relative;
+        color: color3;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        transition: transition;
+
+        &:before
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            background: color4;
+            width: 0%;
+            height: 3px;
+            border-radius: 5px;
+            transform: translate(50%);
+            transition: transition;
+
+        &:hover
+            text-decoration: none;
+            color: colorWhite;
+
+            &:before
+                background: linear-gradient(90deg, color5 0%, color4 60%);
+                width: 50%;
+                transform: translate(50%);
+
+@media desktop
+    .navigation
+        &__container
+            display: flex;
+            justify-content: flex-start;
+
+        &__list
+            flex: 0 1 520px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+@media mobile
+    .navigation
+        &__item
+            padding: 20px;

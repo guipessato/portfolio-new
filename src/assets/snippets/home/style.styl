@@ -1,0 +1,70 @@
+.home
+    background: color2;
+
+    &__container
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        max-width: 1200px;
+        min-height: 450px;
+        padding: 60px 0;
+        margin: 0 auto;
+
+    &__figure
+        max-width: 350px;
+
+        img
+            border-radius: 50%;
+
+    &__title, &__name, &__about
+        color: color3;
+
+    &__title
+        font-size: 21px;
+        font-weight: 500;
+
+    &__name
+        font-size: 42px;
+        font-weight: 600;
+        color: colorWhite;
+
+    &__link
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+        width: 180px;
+        height: 40px;
+        background: color4;
+        color: colorWhite;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        border-radius: 5px;
+        transition: transition;
+
+        &:hover
+            background: color5;
+
+@media mobile
+    .home
+        &__container
+            flex-direction: column-reverse;
+            padding: 30px 20px 60px;
+
+        &__informations
+            max-width: 350px;
+            width: 100%;
+
+        &__name
+            font-size: 28px;
+
+        &__title
+            font-size: 30px;
+
+        &__link
+            width: 100%;
+
+        &__figure
+            max-width: 300px;
+            margin-bottom: 30px;

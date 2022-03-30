@@ -1,0 +1,95 @@
+.projects
+    background: color2;
+
+    &__container
+        max-width: 1200px;
+        min-height: 450px;
+        padding: 60px 0;
+        margin: 0 auto;
+
+    &__list
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+    &__title
+        font-size: 40px;
+        line-height: 60px;
+        font-weight: 600;
+        color: colorWhite;
+        margin-bottom: 30px;
+        text-align: center;
+
+        span
+            color: color4;
+            font-size: 60px;
+            line-height: 60px;
+
+    &__list
+        display: flex;
+        justify-content: space-between;
+
+    &__item
+        background: color1;
+        border: 2px solid color1;
+        color: color3;
+        padding: 15px 20px;
+        flex: 0 1 32%;
+        border-radius: 5px;
+        margin-bottom: 25px;
+        transition: transition;
+
+        &:hover
+            border: 2px solid color5;
+            transform: scale(1.025);
+            box-shadow: 0 3px 3px 3px rgba(255, 255, 255, 0.1);
+
+        h3
+            font-size: 18px;
+            color: colorWhite;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: transition;
+
+        span
+            display: flex;
+            margin-top: 15px;
+            font-weight: 500;
+            font-size: 14px;
+            color: color3;
+
+    &__link
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px auto 0;
+        width: 260px;
+        height: 40px;
+        background: color4;
+        color: colorWhite;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: 0.3px;
+        border-radius: 5px;
+        transition: transition;
+
+        &:hover
+            background: color5;
+
+@media mobile
+    .projects
+        &__title
+            font-size: 30px;
+
+        &__item
+            flex: 0 1 100%;
+            margin: 0 25px 20px;
+
+        &__list
+            .slick
+                &-next
+                    right: 5px;
+
+                &-prev
+                    left: 5px;
