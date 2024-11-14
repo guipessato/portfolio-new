@@ -31,7 +31,7 @@
         display: flex;
         justify-content: space-between;
         flex-flow: row wrap;
-        flex: 0 1 460px;
+        flex: 0 1 560px;
         gap: 20px 0;
 
     &__card
@@ -50,28 +50,29 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            top: calc(0% - 43px);
             color: colorWhite;
             font-weight: 600;
-            padding: 0 10px;
-            background: color4;
-            border: 3px solid color4;
-            border-radius: 5px;
-            opacity: 0;
-            visibility: hidden;
             transition: transition;
+
+            @media desktop
+                position: absolute;
+                top: calc(0% - 43px);
+                opacity: 0;
+                visibility: hidden;
+                padding: 0 10px;
+                background: color4;
+                border: 3px solid color4;
+                border-radius: 5px;
 
         &:last-child
             display: none;
 
-        &:nth-child(n+5)
-            .skills__card-name
-                top: calc(100% + 15px);
+        // &:nth-child(n+6)
+        // .skills__card-name
+        // top: calc(100% + 15px);
 
-            &:before
-                top: calc(100% + 7px);
-
+        // &:before
+        // top: calc(100% + 7px);
         &:before
             content: '';
             position: absolute;
@@ -111,15 +112,26 @@
         &__cards
             flex: 0 1 100%;
 
+        &__image
+            width: 80px;
+            height: auto;
+            max-height: 80px;
+            aspect-ratio: 1 / 1;
+
         &__card
             flex: 0 1 31%;
-            gap: 15px;
+            gap: 10px;
+            height: auto;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+            padding: 5px 0;
 
             &:before
                 display: none;
 
             &-name
-                display: none;
+                font-size: 14px;
 
             &:last-child
                 display: block;

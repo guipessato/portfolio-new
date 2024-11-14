@@ -25,7 +25,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "gulp": "gulp",
+    "start": "gulp",
     "gulp.deploy": "gulp deploy"
   },
   "author": "",
