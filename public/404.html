@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="refresh"
+      content="0; url=https://guipessato.github.io/portfolio-new/"
+    />
+    <title>Redirecionando...</title>
+    <script>
+      (() => {
+        const canonical = "https://guipessato.github.io/portfolio-new/";
+        const path = window.location.pathname.toLowerCase();
+
+        if (
+          path === "/" ||
+          path === "/index.html" ||
+          path === "/public" ||
+          path === "/public/" ||
+          path.endsWith("/public") ||
+          path.endsWith("/public/")
+        ) {
+          window.location.replace(canonical);
+          return;
+        }
+
+        if (
+          !path.startsWith("/portfolio-new") &&
+          !path.startsWith("/portfolio-new/")
+        ) {
+          window.location.replace(canonical);
+          return;
+        }
+
+        window.location.replace(canonical);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando para o portfólio...</p>
+  </body>
+</html>
