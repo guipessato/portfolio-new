@@ -1,0 +1,33 @@
+# Guilherme José Pessato
+
+> Desenvolvedor Front-end e Professor Universitário brasileiro, com mais de 10 anos de experiência em tecnologia. Atua com e-commerce (VTEX IO, VTEX Faststore, Wake) usando React, Next.js e TypeScript, unindo mercado de tecnologia e formação acadêmica.
+
+## Perfil
+
+- Nome completo: Guilherme José Pessato
+- Cargo atual: Desenvolvedor Front-end na ALMAH Comunicação
+- Também: Professor universitário (Universidade de Marília, Fatec Marília) e professor do ensino técnico (Etec Antônio Devisate)
+- Localização: Marília, São Paulo, Brasil
+- LinkedIn: https://www.linkedin.com/in/guipessato/
+- GitHub: https://github.com/guipessato
+
+## Conhecimentos técnicos
+
+HTML, CSS, Sass/SCSS, JavaScript, TypeScript, React.js, Next.js, jQuery, Bootstrap, Figma, Postman, Scrum/Kanban.
+
+## Plataformas de e-commerce
+
+VTEX IO, VTEX Faststore, Wake Commerce, Tray, WordPress, Mercado Shops.
+
+## Trajetória profissional
+
+Timeline completa de experiência está na seção "Experiência" da página principal: https://guipessato.github.io/portfolio-new/#s-experience
+Resumo: Desenvolvedor Front-end na ALMAH Comunicação (2024–atual); Tech Lead na Box Martech (2023–2024); Squad Leader Technical e Desenvolvedor Front-end na Maeztra (2022–2023); Coordenador de Desenvolvimento e Desenvolvedor Front-end na Agência Auaha (2020–2022); início de carreira em suporte técnico (Life Serviços de Comunicação, 2019–2020) e Help Desk (2017–2019).
+
+## Projetos
+
+A lista completa de projetos (cliente, atuação e plataforma usada em cada um) está na seção "Projetos" da página principal: https://guipessato.github.io/portfolio-new/#s-projects
+
+## Contato
+
+Para contato profissional, usar o LinkedIn listado acima.

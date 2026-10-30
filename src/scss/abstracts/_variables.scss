@@ -1,0 +1,50 @@
+@use "sass:map";
+
+$desktop: "screen and (min-width: 992px)";
+$mobile: "screen and (max-width: 991px)";
+
+// Transition
+$transition: all 222ms ease-out;
+
+// Temas (dark = identidade original, light = alternativa)
+// Sass só gera o CSS; a troca em si (atributo data-theme) é feita em runtime pelo theme-toggle.js
+$themes: (
+  dark: (
+    bg-deep: #121212,
+    bg-surface: #1f1f1f,
+    text-strong: #fff,
+    text-muted: #c4c4c4,
+    accent: #6c63ff,
+    accent-strong: #504abd,
+    accent-shadow: rgba(80, 74, 189, 0.3),
+    border: #343434,
+    nav-scrolled-bg: rgba(18, 18, 18, 0.92),
+    timeline-line: rgba(255, 255, 255, 0.1),
+  ),
+  light: (
+    bg-deep: #ffffff,
+    bg-surface: #f1f0f8,
+    text-strong: #121212,
+    text-muted: #5b5b66,
+    accent: #6c63ff,
+    accent-strong: #4b3fd1,
+    accent-shadow: rgba(108, 99, 255, 0.25),
+    border: #e4e2f0,
+    nav-scrolled-bg: rgba(255, 255, 255, 0.92),
+    timeline-line: rgba(0, 0, 0, 0.1),
+  ),
+);
+
+@mixin theme-vars($name) {
+  @each $key, $value in map.get($themes, $name) {
+    --#{$key}: #{$value};
+  }
+}
+
+:root {
+  @include theme-vars(dark);
+}
+
+:root[data-theme="light"] {
+  @include theme-vars(light);
+}
