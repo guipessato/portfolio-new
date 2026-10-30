@@ -1,30 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="author" content="Guilherme José Pessato" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#222" />
-    <meta name="copyright" content="guipessato 2022" />
+    <meta name="copyright" content="guipessato 2026" />
     <meta http-equiv="content-language" content="pt-br" />
+    <meta name="robots" content="index, follow" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme =
+          stored ||
+          (matchMedia("(prefers-color-scheme: light)").matches
+            ? "light"
+            : "dark");
+        if (theme === "light")
+          document.documentElement.setAttribute("data-theme", "light");
+      })();
+    </script>
+    <meta
+      name="description"
+      content="Guilherme José Pessato é Líder de Tecnologia e desenvolvedor front-end com mais de 10 anos de experiência em e-commerce (VTEX IO, VTEX Faststore, Wake, Tray, WordPress). Confira projetos, atuação e contato."
+    />
+    <title>
+      Portfólio | Guilherme José Pessato - Líder de Tecnologia e Front-end
+    </title>
+    <link rel="canonical" href="https://guipessato.github.io/portfolio-new/" />
+
+    <link rel="icon" type="image/svg+xml" href="/portfolio-new/favicon.svg" />
+    <link rel="manifest" href="/portfolio-new/site.webmanifest" />
+
+    <link
+      rel="preload"
+      as="image"
+      type="image/webp"
+      href="./src/assets/image/perfil2.webp"
+      fetchpriority="high"
+    />
+
+    <meta property="og:type" content="profile" />
+    <meta
+      property="og:site_name"
+      content="Portfólio | Guilherme José Pessato"
+    />
+    <meta property="og:locale" content="pt_BR" />
+    <meta
+      property="og:url"
+      content="https://guipessato.github.io/portfolio-new/"
+    />
     <meta
       property="og:title"
-      content="Guilherme José Pessato - Front-end developer"
+      content="Guilherme José Pessato - Líder de Tecnologia e Front-end"
     />
-    <meta property="og:description" content="Front-end developer" />
-    <title>Portfólio | Guilherme José Pessato</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,640;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,640;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
+    <meta
+      property="og:description"
+      content="Líder de Tecnologia e desenvolvedor front-end com mais de 10 anos de experiência em e-commerce (VTEX IO, VTEX Faststore, Wake, Tray, WordPress)."
     />
-    <link rel="stylesheet" href="./css/app.min.css" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    <meta
+      property="og:image"
+      content="https://guipessato.github.io/portfolio-new/src/assets/image/perfil2.jpg"
     />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Guilherme José Pessato - Líder de Tecnologia e Front-end"
+    />
+    <meta
+      name="twitter:description"
+      content="Líder de Tecnologia e desenvolvedor front-end com mais de 10 anos de experiência em e-commerce."
+    />
+    <meta
+      name="twitter:image"
+      content="https://guipessato.github.io/portfolio-new/src/assets/image/perfil2.jpg"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "ProfilePage",
+            "@id": "https://guipessato.github.io/portfolio-new/#profile",
+            "url": "https://guipessato.github.io/portfolio-new/",
+            "inLanguage": "pt-BR",
+            "mainEntity": {
+              "@id": "https://guipessato.github.io/portfolio-new/#person"
+            }
+          },
+          {
+            "@type": "Person",
+            "@id": "https://guipessato.github.io/portfolio-new/#person",
+            "name": "Guilherme José Pessato",
+            "jobTitle": "Líder de Tecnologia",
+            "description": "Profissional com mais de 10 anos de experiência em tecnologia, atuando em desenvolvimento front-end, Product Owner e coordenação de equipes, com especialização em e-commerce.",
+            "url": "https://guipessato.github.io/portfolio-new/",
+            "image": "https://guipessato.github.io/portfolio-new/src/assets/image/perfil2.jpg",
+            "sameAs": [
+              "https://www.linkedin.com/in/guipessato/",
+              "https://github.com/guipessato"
+            ],
+            "knowsAbout": [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "Sass",
+              "React.js",
+              "VTEX IO",
+              "VTEX Faststore",
+              "Wake Commerce",
+              "Tray",
+              "WordPress",
+              "E-commerce"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://guipessato.github.io/portfolio-new/#website",
+            "url": "https://guipessato.github.io/portfolio-new/",
+            "name": "Portfólio | Guilherme José Pessato",
+            "inLanguage": "pt-BR",
+            "author": {
+              "@id": "https://guipessato.github.io/portfolio-new/#person"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -32,13 +136,14 @@
       <div class="header">
         <nav class="navigation">
           <div class="navigation__container">
-            <ul class="navigation__list">
+            <span class="navigation__current" aria-live="polite">Início</span>
+            <ul class="navigation__list" id="navigation-list">
               <li class="navigation__item">
                 <a class="navigation__link" href="#s-about">Quem sou</a>
               </li>
-              <!-- <li class="navigation__item">
-                            <a class="navigation__link" href="#s-experience">Experiências</a>
-                        </li> -->
+              <li class="navigation__item">
+                <a class="navigation__link" href="#s-experience">Experiência</a>
+              </li>
               <li class="navigation__item">
                 <a class="navigation__link" href="#s-projects">Projetos</a>
               </li>
@@ -46,7 +151,48 @@
                 <a class="navigation__link" href="#s-skills">Conhecimentos</a>
               </li>
             </ul>
+            <div class="navigation__actions">
+              <button
+                class="navigation__theme-toggle"
+                type="button"
+                aria-label="Alternar tema claro/escuro"
+              >
+                <svg
+                  class="navigation__theme-icon navigation__theme-icon--sun"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="4" />
+                  <path
+                    d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
+                  />
+                </svg>
+                <svg
+                  class="navigation__theme-icon navigation__theme-icon--moon"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
+                </svg>
+              </button>
+              <button
+                class="navigation__toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="navigation-list"
+              >
+                <span class="navigation__toggle-bar"></span>
+                <span class="navigation__toggle-bar"></span>
+                <span class="navigation__toggle-bar"></span>
+              </button>
+            </div>
           </div>
+          <div class="navigation__backdrop"></div>
         </nav>
       </div>
     </header>
@@ -70,7 +216,21 @@
             </a>
           </div>
           <figure class="home__figure">
-            <img src="../src/assets/image/perfil.jpg" alt="Perfil" />
+            <picture>
+              <source
+                srcset="./src/assets/image/perfil2.webp"
+                type="image/webp"
+              />
+              <img
+                src="./src/assets/image/perfil2.jpg"
+                alt="Foto de Guilherme José Pessato"
+                width="1098"
+                height="1098"
+                fetchpriority="high"
+                loading="eager"
+                decoding="async"
+              />
+            </picture>
           </figure>
         </div>
       </section>
@@ -867,16 +1027,161 @@
             <article class="about__informations">
               <h2 class="about__title">Quem sou <span>.</span></h2>
               <p class="about__paragraph">
-                Sou Guilherme José Pessato, profissional com mais de 10 anos de
-                experiência em tecnologia e atualmente Líder de Tecnologia.
-                Tenho ampla atuação em desenvolvimento front-end, Product Owner
-                e coordenação de equipes, liderando times para garantir entregas
-                de alta qualidade aos clientes. Especializado em E-commerce,
-                interfaces modernas e otimizadas, com foco em performance,
-                animações, responsividade e SEO, meu objetivo é criar
-                experiências digitais e gerenciar times com excelência.
+                Desenvolvedor Front-end e Professor Universitário com mais de
+                <b>10 anos</b> de experiência na área de tecnológica.<br />Minha
+                atuação une o mercado de tecnologia à formação acadêmica,
+                focando na criação de interfaces modernas e no desenvolvimento
+                de novos talentos.<br />
+                Atualmente, trabalho com o desenvolvimento de e-commerces e
+                projetos de marketing digital, utilizando Next/React,
+                JavaScript, SASS, Tailwind CSS e UI/UX Design para entregar
+                soluções responsivas e centradas no usuário.<br />Na área da
+                educação, sou professor na FATEC Marília e UNIMAR, consolidando
+                uma trajetória que inclui também uma passagem de dois anos pela
+                ETEC Antônio Devisate.<br />Minha base profissional integra o
+                uso de metodologias ágeis (Scrum/Kanban) e uma visão estratégica
+                de suporte técnico e gestão de SLAs. Sou movido pelo desafio de
+                criar tecnologias acessíveis, eficientes e de alto impacto para
+                o usuário final.
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="s-experience">
+        <div class="experience" id="experience">
+          <div class="experience__container">
+            <h2 class="experience__title">Experiência <span>.</span></h2>
+            <ol class="experience__timeline">
+              <div class="experience__line" aria-hidden="true"></div>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">nov. 2024 — atual</span>
+                <h3 class="experience__role">Desenvolvedor Front-end</h3>
+                <span class="experience__company">ALMAH Comunicação</span>
+                <p class="experience__description">
+                  Aplicações VTEX (CMS, IO e Faststore) e Wake com React,
+                  Next.js e TypeScript; performance, SEO e GEO.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">fev. 2026 — atual</span>
+                <h3 class="experience__role">Professor de Ensino Superior</h3>
+                <span class="experience__company">Universidade de Marília</span>
+                <p class="experience__description">
+                  Docente no curso de Análise e Desenvolvimento de Sistemas:
+                  Front-end, Design Patterns e Clean Code.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">dez. 2025 — atual</span>
+                <h3 class="experience__role">Professor de Ensino Superior</h3>
+                <span class="experience__company">Fatec Marília</span>
+                <p class="experience__description">
+                  Docente no curso de Desenvolvimento de Software
+                  Multiplataforma: Desenvolvimento Web e UX.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">abr. 2024 — abr. 2026</span>
+                <h3 class="experience__role">
+                  Professor do Ensino Médio e Técnico
+                </h3>
+                <span class="experience__company">Etec Antônio Devisate</span>
+                <p class="experience__description">
+                  Professor mentor em Desenvolvimento de Sistemas, orientando
+                  mais de 10 Trabalhos de Conclusão de Curso.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">ago. 2023 — nov. 2024</span>
+                <h3 class="experience__role">Tech Lead</h3>
+                <span class="experience__company">Box Martech</span>
+                <p class="experience__description">
+                  Liderança técnica e Product Owner, padrões de código e
+                  arquitetura de soluções de e-commerce.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">mar. 2023 — ago. 2023</span>
+                <h3 class="experience__role">Squad Leader Technical</h3>
+                <span class="experience__company">Maeztra</span>
+                <p class="experience__description">
+                  Validação técnica, gestão de backlog e suporte à equipe, com
+                  foco em qualidade e performance do produto.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">mai. 2022 — ago. 2023</span>
+                <h3 class="experience__role">Desenvolvedor Front-end</h3>
+                <span class="experience__company">Maeztra</span>
+                <p class="experience__description">
+                  Liderança técnica do squad em projetos VTEX, com React,
+                  TypeScript e jQuery.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">jun. 2021 — mai. 2022</span>
+                <h3 class="experience__role">
+                  Coordenador de Desenvolvimento &amp; Dev Front-end Pleno
+                </h3>
+                <span class="experience__company">Agência Auaha</span>
+                <p class="experience__description">
+                  Liderança de equipe de 15 desenvolvedores, implantação de
+                  Scrum e projetos em Tray, VTEX e Nuvemshop.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">set. 2020 — mai. 2021</span>
+                <h3 class="experience__role">Desenvolvedor Front-end Júnior</h3>
+                <span class="experience__company">Agência Auaha</span>
+                <p class="experience__description">
+                  Desenvolvimento e manutenção de layouts para e-commerce e
+                  landing pages.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">mai. 2019 — set. 2020</span>
+                <h3 class="experience__role">Analista de Suporte Técnico N2</h3>
+                <span class="experience__company"
+                  >Life Serviços de Comunicação</span
+                >
+                <p class="experience__description">
+                  Suporte a clientes corporativos, monitoramento de redes e
+                  ferramenta interna de relatórios em JS.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">ago. 2017 — jun. 2019</span>
+                <h3 class="experience__role">
+                  Estagiário de TI — Suporte Técnico/Help Desk
+                </h3>
+                <span class="experience__company"
+                  >Etec Dep. Paulo Ornellas Carvalho de Barros</span
+                >
+                <p class="experience__description">
+                  Suporte técnico e infraestrutura de TI da unidade escolar.
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">abr. 2018 — nov. 2018</span>
+                <h3 class="experience__role">Professor Monitor</h3>
+                <span class="experience__company">Fatec Garça</span>
+                <p class="experience__description">
+                  Monitoria de Algoritmo e Programação em Microinformática
+                  (Java).
+                </p>
+              </li>
+              <li class="experience__item delayMediumReveal intervalCardReveal">
+                <span class="experience__period">mar. 2017 — jul. 2017</span>
+                <h3 class="experience__role">Professor Monitor</h3>
+                <span class="experience__company">Fatec Garça</span>
+                <p class="experience__description">
+                  Monitoria de Algoritmo e Programação em Microinformática
+                  (Java).
+                </p>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
@@ -886,10 +1191,264 @@
           <h2 class="projects__title">Projetos <span>.</span></h2>
           <div class="projects__list">
             <a
+              href="https://www.overfrio.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Overfrio</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <!-- TODO: URL real -- pasta: faststore-beneteeletroiluminacao -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Benete Materiais Elétricos e Iluminação</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <a
+              href="https://www.benimports.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Ben Imports</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <a
+              href="https://www.montserratshop.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Montserratshop</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <a
+              href="https://www.ophicina.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Ophicina</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <!-- TODO: URL real -- pasta: faststore-radha -->
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Charmô</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <a
+              href="https://www.aguasprata.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Águas Prata</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX Faststore</span>
+            </a>
+
+            <a
+              href="https://www.ferragensfloresta.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Ferragens Floresta</h3>
+              <p>
+                Evolução do ecommerce desenvolvido para projeto da Almah
+                Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: Deco.cx + VTEX</span>
+            </a>
+
+            <a
+              href="https://www.sestini.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Sestini</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.irmaossoares.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Irmãos Soares</h3>
+              <p>
+                Evolução do ecommerce desenvolvido para projeto da Almah
+                Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.ramarim.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Ramarim</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.chillisneakers.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Chilli Sneakers</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.bijutotal.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Bijutotal</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.comfortflex.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Comfortflex</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://comprar.dacar.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Dacar Tintas B2B</h3>
+              <p>
+                Evolução do ecommerce desenvolvido para projeto da Almah
+                Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.saogeraldotintas.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>São Geraldo Tintas</h3>
+              <p>
+                Implementação e evolução do ecommerce desenvolvido para projeto
+                da Almah Comunicação.<br />
+              </p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: VTEX IO</span>
+            </a>
+
+            <a
+              href="https://www.adaptogen.com.br/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="projects__item"
+            >
+              <h3>Adaptogen</h3>
+              <p>Implementação e evolução do ecommerce.<br /></p>
+              <span>Atuação: Desenvolvedor</span>
+              <span>Plataforma: Wake Commerce</span>
+            </a>
+
+            <a
               href="https://www.ikesaki.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Ikesaki</h3>
               <p>
@@ -906,7 +1465,7 @@
               href="https://www.lauton.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Lauton</h3>
               <p>
@@ -923,7 +1482,7 @@
               href="https://www.pinkcheeks.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Pinkcheeks</h3>
               <p>
@@ -940,7 +1499,7 @@
               href="https://www.kindbeauty.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Kind</h3>
               <p>
@@ -957,7 +1516,7 @@
               href="https://www.florenza.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Florenza</h3>
               <p>
@@ -974,7 +1533,7 @@
               href="https://www.davene.net.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Davene</h3>
               <p>
@@ -991,7 +1550,7 @@
               href="https://www.blkperformance.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>BLK Performance</h3>
               <p>
@@ -1008,7 +1567,7 @@
               href="https://www.doctorschoice.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Doctors Choice</h3>
               <p>
@@ -1025,7 +1584,7 @@
               href="https://www.doctorschoice.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Doctors Choice</h3>
               <p>
@@ -1042,7 +1601,7 @@
               href="https://www.doctorschoice.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Doctors Choice</h3>
               <p>
@@ -1059,7 +1618,7 @@
               href="https://parquedojoka.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Parque do Joka</h3>
               <p>
@@ -1076,15 +1635,11 @@
               href="https://parquedojoka.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Sicredi Dexis</h3>
-              <p>
-                Evolução e sustentação de site institucional.
-              </p>
-              <span
-                >Atuação: Tech Lead</span
-              >
+              <p>Evolução e sustentação de site institucional.</p>
+              <span>Atuação: Tech Lead</span>
               <span>Tecnologia: WordPress</span>
             </a>
 
@@ -1092,11 +1647,12 @@
               href="https://boxideias.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Box ideias</h3>
               <p>
-                Remoção de vírus, migração de hospedagem e configuração de ambientes WordPress.
+                Remoção de vírus, migração de hospedagem e configuração de
+                ambientes WordPress.
               </p>
               <span
                 >Atuação: Tech Lead, Desenvolvedor, Design e Product Owner</span
@@ -1108,7 +1664,7 @@
               href="https://www.reebok.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Reebok</h3>
               <p>
@@ -1123,7 +1679,7 @@
               href="https://www.lupo.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Lupo</h3>
               <p>
@@ -1137,7 +1693,7 @@
               href="https://www.umusicstore.com/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Universal Music Store</h3>
               <p>
@@ -1151,7 +1707,7 @@
               href="https://www.libresse.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Libresse</h3>
               <p>
@@ -1165,7 +1721,7 @@
               href="https://www.emporiovivendadocamarao.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Empório Vivenda do Camarão</h3>
               <p>
@@ -1179,7 +1735,7 @@
               href="https://www.iapcosmeticos.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Iap Cosméticos</h3>
               <p>
@@ -1193,7 +1749,7 @@
               href="https://www.beatrizwerebe.com/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Beatriz Werebe</h3>
               <p>
@@ -1207,7 +1763,7 @@
               href="https://www.alignstore.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Invisalign</h3>
               <p>
@@ -1221,7 +1777,7 @@
               href="https://aramado.com/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Aramado</h3>
               <p>
@@ -1235,7 +1791,7 @@
               href="https://radiolajuices.commercesuite.com.br"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Radiola Juices</h3>
               <p>
@@ -1250,7 +1806,7 @@
               href="https://www.casadoroadie.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Casa do Roadie</h3>
               <p>
@@ -1265,7 +1821,7 @@
               href="https://www.arqplace.com.br"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Arqplace</h3>
               <p>
@@ -1280,7 +1836,7 @@
               href="https://loja.tricospa.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Trico Spa</h3>
               <p>
@@ -1295,7 +1851,7 @@
               href="https://www.martinensepneus.com.br/"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Martinense Pneus</h3>
               <p>Layout desenvolvido para projeto da Agência Auaha<br /></p>
@@ -1307,7 +1863,7 @@
               href="https://www.mercadovinhos.com.br/?preview=true"
               target="_blank"
               rel="noopener noreferrer"
-              class="projects__item delayMediumReveal intervalCardReveal"
+              class="projects__item"
             >
               <h3>Mercado Vinhos</h3>
               <p>
@@ -1318,6 +1874,9 @@
               <span>Plataforma: Mercado Shop</span>
             </a>
           </div>
+          <button type="button" class="projects__link projects__more">
+            Ver mais projetos
+          </button>
           <a
             href="https://github.com/guipessato"
             rel="noopener"
@@ -1340,151 +1899,241 @@
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">HTML</span>
                 <img
-                  src="../src/assets/icons/html-cor.svg"
+                  src="./src/assets/icons/html-cor.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do html"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">CSS</span>
                 <img
-                  src="../src/assets/icons/css-cor.svg"
+                  src="./src/assets/icons/css-cor.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do css"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Javascript</span>
                 <img
-                  src="../src/assets/icons/js-cor.svg"
+                  src="./src/assets/icons/js-cor.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do javascript"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Bootstrap</span>
                 <img
-                  src="../src/assets/icons/bootstrap.svg"
+                  src="./src/assets/icons/bootstrap.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do bootstrap"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Sass</span>
                 <img
-                  src="../src/assets/icons/sass.svg"
+                  src="./src/assets/icons/sass.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do sass"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Stylus</span>
                 <img
-                  src="../src/assets/icons/stylus.svg"
+                  src="./src/assets/icons/stylus.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do stylus"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">jQuery</span>
                 <img
-                  src="../src/assets/icons/jquery-icon.svg"
+                  src="./src/assets/icons/jquery-icon.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do jquery"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">React.js</span>
                 <img
-                  src="../src/assets/icons/react.svg"
+                  src="./src/assets/icons/react.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do React"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Postman</span>
                 <img
-                  src="../src/assets/icons/postman.svg"
+                  src="./src/assets/icons/postman.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do Postman"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Figma</span>
                 <img
-                  src="../src/assets/icons/figma.svg"
+                  src="./src/assets/icons/figma.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do Fgima"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">WordPress</span>
                 <img
-                  src="../src/assets/icons/wordpress.svg"
+                  src="./src/assets/icons/wordpress.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do WordPress"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">VTEX</span>
                 <img
-                  src="../src/assets/icons/vtex.svg"
+                  src="./src/assets/icons/vtex.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do Vtex"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
-                <span class="skills__card-name">Shopify</span>
+                <span class="skills__card-name">Wake</span>
                 <img
-                  src="../src/assets/icons/shopify.svg"
+                  src="./src/assets/icons/wake.svg"
                   width="64px"
                   height="64px"
-                  alt="ícone do shopify"
+                  alt="ícone do Wake"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Tray</span>
                 <img
-                  src="../src/assets/icons/tray.svg"
+                  src="./src/assets/icons/tray.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do Tray"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card delayMediumReveal intervalCardReveal">
                 <span class="skills__card-name">Mercadoshops</span>
                 <img
-                  src="../src/assets/icons/mercadoshops.svg"
+                  src="./src/assets/icons/mercadoshops.svg"
                   width="64px"
                   height="64px"
                   alt="ícone do Mercadoshops"
                   class="skills__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="skills__card delayMediumReveal intervalCardReveal">
+                <span class="skills__card-name">Next.js</span>
+                <img
+                  src="./src/assets/icons/nextjs.svg"
+                  width="64px"
+                  height="64px"
+                  alt="ícone do Next.js"
+                  class="skills__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="skills__card delayMediumReveal intervalCardReveal">
+                <span class="skills__card-name">Tailwind CSS</span>
+                <img
+                  src="./src/assets/icons/tailwind.svg"
+                  width="64px"
+                  height="64px"
+                  alt="ícone do Tailwind CSS"
+                  class="skills__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="skills__card delayMediumReveal intervalCardReveal">
+                <span class="skills__card-name">Python</span>
+                <img
+                  src="./src/assets/icons/python.svg"
+                  width="64px"
+                  height="64px"
+                  alt="ícone do Python"
+                  class="skills__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="skills__card delayMediumReveal intervalCardReveal">
+                <span class="skills__card-name">Vue.js</span>
+                <img
+                  src="./src/assets/icons/vue.svg"
+                  width="64px"
+                  height="64px"
+                  alt="ícone do Vue.js"
+                  class="skills__image"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </li>
+              <li class="skills__card delayMediumReveal intervalCardReveal">
+                <span class="skills__card-name">IA Skills</span>
+                <img
+                  src="./src/assets/icons/ia-skills.svg"
+                  width="64px"
+                  height="64px"
+                  alt="ícone de IA Skills"
+                  class="skills__image"
+                  loading="lazy"
+                  decoding="async"
                 />
               </li>
               <li class="skills__card"></li>
@@ -1502,10 +2151,12 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="../src/assets/icons/github.svg"
+                    src="./src/assets/icons/github.svg"
                     width="20px"
                     height="20px"
                     alt="ícone do github"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </li>
@@ -1516,10 +2167,12 @@
                   rel="noopener noreferrer"
                 >
                   <img
-                    src="../src/assets/icons/linkedin.svg"
+                    src="./src/assets/icons/linkedin.svg"
                     width="20px"
                     height="20px"
                     alt="ícone do linkedin"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </a>
               </li>
@@ -1540,18 +2193,6 @@
       </section>
     </main>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./js/app.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

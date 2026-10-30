@@ -1,0 +1,18 @@
+{
+  "name": "Guilherme José Pessato - Portfólio",
+  "short_name": "GP Portfólio",
+  "description": "Portfólio de Guilherme José Pessato, Líder de Tecnologia e desenvolvedor front-end especializado em e-commerce.",
+  "start_url": "/portfolio-new/",
+  "scope": "/portfolio-new/",
+  "lang": "pt-BR",
+  "display": "browser",
+  "background_color": "#121212",
+  "theme_color": "#222222",
+  "icons": [
+    {
+      "src": "/portfolio-new/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
