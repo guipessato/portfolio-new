@@ -1,4 +1,4 @@
-@use '../abstracts/variables' as *;
+@use "../abstracts/variables" as *;
 
 .header {
   position: fixed;
@@ -47,7 +47,7 @@ body.nav-open {
     transition: $transition;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: -10px;
@@ -65,7 +65,11 @@ body.nav-open {
       color: var(--text-strong);
 
       &::before {
-        background: linear-gradient(90deg, var(--accent-strong) 0%, var(--accent) 60%);
+        background: linear-gradient(
+          90deg,
+          var(--accent-strong) 0%,
+          var(--accent) 60%
+        );
         width: 50%;
         transform: translate(50%);
       }
@@ -120,11 +124,11 @@ body.nav-open {
     }
   }
 
-  :root[data-theme='light'] &__theme-icon--sun {
+  :root[data-theme="light"] &__theme-icon--sun {
     display: none;
   }
 
-  :root[data-theme='light'] &__theme-icon--moon {
+  :root[data-theme="light"] &__theme-icon--moon {
     display: block;
   }
 }
@@ -176,7 +180,7 @@ body.nav-open {
       justify-content: center;
       align-items: center;
       gap: 5px;
-      width: 32px;
+      width: 24px;
       height: 32px;
       padding: 0;
       background: transparent;
@@ -252,5 +256,52 @@ body.nav-open {
         }
       }
     }
+  }
+}
+
+.scroll-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1200;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-strong), var(--accent));
+  color: #fff;
+  overflow: visible;
+  box-shadow: 0 12px 30px rgba(108, 99, 255, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition:
+    opacity 240ms ease,
+    visibility 240ms ease,
+    transform 240ms ease;
+  cursor: pointer;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    overflow: visible;
   }
 }
